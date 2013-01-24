@@ -7,6 +7,10 @@
 		http://www.springframework.org/schema/data/repository http://www.springframework.org/schema/data/repository/spring-repository-1.0.xsd
 		http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.1.xsd">
 
+	<jpa:repositories base-package="au.com.kundayi">
+		<repository:exclude-filter type="regex" expression=".*GenericRepository"/>
+	</jpa:repositories>
+	
 	<jpa:repositories base-package="au.com.regimo">
 		<repository:exclude-filter type="regex" expression=".*GenericRepository"/>
 	</jpa:repositories>
@@ -14,7 +18,7 @@
 	<!-- Creates a EntityManagerFactory for use with the Hibernate JPA provider -->
 	<bean id="entityManagerFactory" class="org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean">
 		<property name="dataSource" ref="dataSource" />
-		<property name="packagesToScan" value="au.com.regimo.core,au.com.regimo.cms"/>
+		<property name="packagesToScan" value="au.com.regimo.core,au.com.kundayi.cms"/>
 		<property name="jpaVendorAdapter">
 			<bean class="org.springframework.orm.jpa.vendor.HibernateJpaVendorAdapter">
 				<property name="databasePlatform" value="${hibernate.dialect}"/>
