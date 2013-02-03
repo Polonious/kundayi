@@ -56,6 +56,22 @@
 		anything that is valid markup :)</span>
 </div>
 
+<div id="content">
+	<div id="content-box">
+		<div class="content-header">
+			<div>
+				<h3 id="productTitle">Support Us</h3>
+			</div>
+		</div>
+		<c:forEach var="product" items="${products}">
+			<div class="simpleCart_shelfItem">				
+				<img src="${product.imageUrl}" alt="${product.title}"> 
+				<br><span class="item_price">\$${product.price}</span> 
+				<a href="javascript:;" class="item_add">Add to Cart</a>
+			</div>
+		</c:forEach>
+	</div>
+</div>
 
 <div id="content">
 	<div id="content-box">

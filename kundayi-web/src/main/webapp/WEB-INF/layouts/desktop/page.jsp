@@ -20,6 +20,7 @@
 	<script type="text/javascript" src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
 	<script type="text/javascript" src="<c:url value="/resources/waterwheelCarousel/jquery.waterwheelCarousel.min.js" />"></script>
 	<script type="text/javascript" src="/resources/orbit/jquery.orbit-1.2.3.min.js"></script>
+	<script type="text/javascript" src="/resources/simplecart/simpleCart.min.js"></script>
 
 	<tiles:useAttribute id="styles" name="styles" classname="java.util.List" ignore="true" /><c:forEach var="style" items="${styles}">
 	<link rel="stylesheet" type="text/css" href="${style}" /></c:forEach>

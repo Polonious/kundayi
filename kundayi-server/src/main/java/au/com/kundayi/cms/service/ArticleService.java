@@ -13,6 +13,7 @@ import au.com.regimo.core.service.GenericService;
 public class ArticleService extends GenericService<ArticleRepository, Article> {
 
 	private String featuredCategorySlug;
+	private String productCategorySlug;
 
 	@Inject
 	public ArticleService(ArticleRepository repository) {
@@ -21,6 +22,10 @@ public class ArticleService extends GenericService<ArticleRepository, Article> {
 
 	public Iterable<Article> findAllFeatured(){
 		return repository.findByCategorySlug(featuredCategorySlug);
+	}
+	
+	public Iterable<Article> findAllProducts(){
+		return repository.findByCategorySlug(productCategorySlug);
 	}
 
 	public Article findBySlug(String slug){
@@ -34,6 +39,10 @@ public class ArticleService extends GenericService<ArticleRepository, Article> {
 	@Value("${cms.category.featured}")
 	public void setFeaturedCategorySlug(String featuredCategorySlug) {
 		this.featuredCategorySlug = featuredCategorySlug;
+	}
+	@Value("${cms.category.products}")
+	public void setProductCategorySlug(String productCategorySlug) {
+		this.productCategorySlug = productCategorySlug;
 	}
 
 }
