@@ -23,5 +23,12 @@
 			</div>
 		</c:forEach>
 	</div>
-
+	<div id="content-about">
+		<h2>
+			<c:out value="${aboutProjectArticle.title}" escapeXml="false" />
+		</h2>
+		<p class="TrueNotes">
+			<c:out value="${aboutProjectArticle.detail}" escapeXml="false" />
+		</p>
+	</div>
 </div>

@@ -53,6 +53,7 @@ public class HomeController {
 		map.addAttribute("content", content);
 		map.addAttribute("feature", articleService.findAllFeatured());
 		map.addAttribute("products", articleService.findAllProducts());
+		map.addAttribute("aboutProjectArticle", articleService.findBySlug("about-project"));
 		return "home";
 	}
 
