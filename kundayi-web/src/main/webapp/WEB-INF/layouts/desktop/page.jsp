@@ -30,13 +30,16 @@
 </head>
 
 <body class="claro">
-	<input type="hidden" id="locale" value="${pageContext.response.locale}"/>
-  	<div id="header-container">
-		<tiles:insertAttribute name="header" />
-	</div>
-	<div id="content-container">
-		<tiles:insertAttribute name="content" />
-		<div class="push"></div>
+	<div id="main-container">
+		<input type="hidden" id="locale"
+			value="${pageContext.response.locale}" />
+		<div id="header-container">
+			<tiles:insertAttribute name="header" />
+		</div>
+		<div id="content-container">
+			<tiles:insertAttribute name="content" />
+			<div class="push"></div>
+		</div>		
 	</div>
 	<div id="footer">
 		<tiles:insertAttribute name="footer" />
