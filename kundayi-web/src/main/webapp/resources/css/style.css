@@ -192,13 +192,18 @@ body {
 
 #content-about {
 	height: auto;
-	min-height: 678px;
+	border-radius: 1.2em 0em 1.2em 0em;
 	border: 1px solid #d6d6d6;
 	font-size: 1.3em;
 	margin: 15px auto;
-	padding: 25px 30px 30px;
-	width: 980px;
+	padding: 25px 30px 30px;	
 	background: #B62923;
+	color: white !important;
+	width: 890px; 	
+}
+#content-about h2 {
+	margin: 5px 0px 15px;
+	color: white !important;
 }
 
 #page-content {
