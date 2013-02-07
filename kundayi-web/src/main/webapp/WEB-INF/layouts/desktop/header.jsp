@@ -4,8 +4,7 @@
 <c:when test="${empty menu}">
 	<div id="header">
 		<div class="cbox">
-			<a href="/content/article/we-listen-design-innovate"><img id="logo" src="<c:url value="/resources/images/logo.png" />" alt="logo" /></a>
-			<img id="trusted" src="<c:url value="/resources/images/trusted-technologists.png" />" />
+			<a href="/home"><img id="logo" src="<c:url value="/resources/images/logo.png" />" alt="logo" /></a>			
 		</div>
 	</div>
 	<div id="header-bar">
