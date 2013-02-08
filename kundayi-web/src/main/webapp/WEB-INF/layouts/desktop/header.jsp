@@ -4,7 +4,10 @@
 <c:when test="${empty menu}">
 	<div id="header">
 		<div class="cbox">
-			<a href="/home"><img id="logo" src="<c:url value="/resources/images/logo.png" />" alt="logo" /></a>			
+			<a href="/home"><img id="logo" src="<c:url value="/resources/images/logo.png" />" alt="logo" /></a>
+			<div class="cartInfo">
+				<span class="simpleCart_quantity">0</span>
+			</div>			
 		</div>
 	</div>
 	<div id="header-bar">

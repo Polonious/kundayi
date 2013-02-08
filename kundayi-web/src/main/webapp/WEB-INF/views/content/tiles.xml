@@ -11,5 +11,10 @@
 		<put-attribute name="title" expression="Polonious - ${article.title}" />
 		<put-attribute name="content" value="/WEB-INF/views/content/article.jsp" />
 	</definition>
+	
+	<definition name="content/product" extends="template">
+		<put-attribute name="title" expression="Polonious - ${product.title}" />
+		<put-attribute name="content" value="/WEB-INF/views/content/product.jsp" />
+	</definition>
 
 </tiles-definitions>

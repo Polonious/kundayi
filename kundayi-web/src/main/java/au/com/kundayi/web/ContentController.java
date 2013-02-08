@@ -67,6 +67,14 @@ public class ContentController {
 			articleService.findBySlug(slug));
 		return "content/article";
 	}
+	
+	@RequestMapping(value = "/product/{slug}")
+	public String getProduct(@PathVariable String slug, ModelMap map) {
+		map.addAttribute("product", fromWordPress() ?
+			wpPostRepository.findByPostName(slug):
+			articleService.findBySlug(slug));
+		return "content/product";
+	}
 
 	@RequestMapping(value = "/importFromWordPress")
 	public String importFromWorldPress() {

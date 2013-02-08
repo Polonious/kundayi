@@ -16,10 +16,11 @@
 			<h3 id="productTitle">Support Us</h3>
 		</div>
 		<c:forEach var="product" items="${products}">
-			<div class="shelfItem">
-				<img src="${product.imageUrl}" alt="${product.title}"> <br>
+			<div class="simpleCart_shelfItem">
+				<a href="/content/product/${product.slug}"><img src="${product.imageUrl}" alt="${product.title}" class="item_image"></a> <br>
 				<span class="item_price">\$${product.price}</span> <a
 					href="javascript:;" class="item_add">Add to Cart</a>
+				<h2 class="item_name">${product.title}</h2>
 			</div>
 		</c:forEach>
 	</div>
