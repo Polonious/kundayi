@@ -7,6 +7,7 @@
 			<a href="/home"><img id="logo" src="<c:url value="/resources/images/logo.png" />" alt="logo" /></a>
 			<div class="cartInfo">
 				<span class="simpleCart_quantity">0</span>
+				items
 			</div>			
 		</div>
 	</div>
@@ -18,7 +19,13 @@
 	<c:forEach var="userDashlet" items="${menu.userDashlets}">
 		<script type="text/javascript">
 	        $(document).ready(function(){
-	        	$('#header-container').load('/content/dashlet/${userDashlet.id}');
+	        	$('#header-container').load('/content/dashlet/${userDashlet.id}', function(){
+	        		$("#header .cartInfo").toggle(function(){		        		
+		        		$("#shoppingCart").show();		
+		        	}, function(){
+		        		$("#shoppingCart").hide();		
+		        	});
+	        	});	        		        
 	        });
 	    </script>
 	</c:forEach>

@@ -5,6 +5,7 @@
 	
 	<definition name="template" templateExpression="/WEB-INF/layouts/${currentDevice.mobile?'mobile':'desktop'}/page.jsp">
 		<put-attribute name="header" expression="/WEB-INF/layouts/${currentDevice.mobile?'mobile':'desktop'}/header.jsp" />
+		<put-attribute name="shoppingCart" expression="/WEB-INF/layouts/${currentDevice.mobile?'mobile':'desktop'}/shoppingCart.jsp" />
 		<put-attribute name="footer" expression="/WEB-INF/layouts/${currentDevice.mobile?'mobile':'desktop'}/footer.jsp" />
 	</definition>
 

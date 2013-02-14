@@ -17,8 +17,9 @@
 		var pageReady = [];
 	</script>
 
-	<script type="text/javascript" src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
-	<script type="text/javascript" src="/resources/simplecart/simpleCart.min.js"></script>	
+	<script type="text/javascript" src="http://code.jquery.com/jquery-1.8.3.min.js"></script>
+	<script type="text/javascript" src="/resources/simplecart/simpleCart.min.js"></script>
+	<script type="text/javascript" src="/resources/js/main.js"></script>		
 	<script>
 		simpleCart({
 			checkout : {
@@ -44,6 +45,7 @@
 		</div>
 		<div id="content-container">
 			<tiles:insertAttribute name="content" />
+			<tiles:insertAttribute name="shoppingCart" />
 			<div class="push"></div>
 		</div>		
 	</div>
