@@ -2,7 +2,7 @@
 
 <div id="shoppingCart">
 	<div class="shoppingCart-header">
-		<button class="closeButton"><i class="close"></i></button>
+		<button class="minButton closeShoppingCart"><i class="close"></i></button>
 		<h3>Cart Details</h3>
 	</div>
 	<div class="shoppingCart-body">
@@ -17,6 +17,7 @@
 		</div>
 	</div>
 	<div class="shoppingCart-footer">
-		<button class="simpleCart_checkout button primary">Checkout</button>
+		<button class="button closeShoppingCart">Close</button>
+		<button class="simpleCart_checkout button primary">Checkout</button>		
 	</div>
 </div>

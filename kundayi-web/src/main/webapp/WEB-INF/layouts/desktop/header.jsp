@@ -20,11 +20,9 @@
 		<script type="text/javascript">
 	        $(document).ready(function(){
 	        	$('#header-container').load('/content/dashlet/${userDashlet.id}', function(){
-	        		$("#header .cartInfo").toggle(function(){		        		
-		        		$("#shoppingCart").show();		
-		        	}, function(){
-		        		$("#shoppingCart").hide();		
-		        	});
+	        		$("#header .cartInfo").click(function(){
+	        			$("#shoppingCart").toggle();		
+	        		});
 	        	});	        		        
 	        });
 	    </script>
