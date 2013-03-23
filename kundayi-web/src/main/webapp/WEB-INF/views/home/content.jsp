@@ -11,13 +11,13 @@
 <![endif]-->
 
 <div id="content">
-	<div id="content-box">
+	<div id="shelf-box">
 		<div class="content-header">
 			<h3 id="productTitle">Support Us</h3>
 		</div>
 		<c:forEach var="product" items="${products}">
 			<div class="simpleCart_shelfItem">
-				<a href="/content/product/${product.slug}"><img src="${product.imageUrl}" alt="${product.title}" class="item_image"></a> <br>
+				<a href="/content/product/${product.slug}"><img src="/${product.imageUrl}" alt="${product.title}" class="item_image"></a> <br>
 				<span class="item_price">\$${product.price}</span> <a
 					href="javascript:;" class="item_add">Add to Cart</a>
 				<h2 class="item_name">${product.title}</h2>

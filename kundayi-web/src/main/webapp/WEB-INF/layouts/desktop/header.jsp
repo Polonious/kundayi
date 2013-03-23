@@ -23,6 +23,7 @@
 	        		$("#header .cartInfo").click(function(){
 	        			$("#shoppingCart").toggle();		
 	        		});
+	        		simpleCart.update();
 	        	});	        		        
 	        });
 	    </script>

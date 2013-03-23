@@ -7,7 +7,7 @@ $(function(){
 			{ view: "currency", attr: "price", label: "Price"},			
 			{ attr: "quantity", label: "Quantity", view:"input"},			
 			{ view: "currency", attr: "total", label: "SubTotal" },		
-			{ view: "remove", text: "Remove", label: false}			
+			{ view: "remove", text: "<img src=\"/resources/images/cart_remove.png\" width=\"40px\" height=\"39px\" style=\"margin:-13px;\">", label: false}			
 		],
 
 		cartStyle: "div", 
