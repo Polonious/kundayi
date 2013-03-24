@@ -3,11 +3,10 @@ $(function(){
 		// array representing the format and columns of the cart,
 		// see the cart columns documentation
 		cartColumns: [
-			{ attr: "name", label: "Name"},
-			{ view: "currency", attr: "price", label: "Price"},			
-			{ attr: "quantity", label: "Quantity", view:"input"},			
-			{ view: "currency", attr: "total", label: "SubTotal" },		
-			{ view: "remove", text: "<img src=\"/resources/images/cart_remove.png\" width=\"40px\" height=\"39px\" style=\"margin:-13px;\">", label: false}			
+			{ attr: "name", label: false},
+			{ view: "currency", attr: "price", label: false},			
+			{ attr: "quantity", view:"input", label: false},								
+			{ view: "remove", text: "<img src=\"/resources/images/cart_remove.png\" width=\"33px\" height=\"31px\">", label: false}			
 		],
 
 		cartStyle: "div", 
@@ -62,29 +61,8 @@ $(function(){
 		beforeCheckout		: null,
 	        beforeRemove           : null
 	});
-
-	$("#content-box .simpleCart_shelfItem").mouseenter(function(event) {		
-		$(this).find('.tooltip').fadeIn(200);
-	});
-	$("#content-box .simpleCart_shelfItem").mouseleave(function(event) {
-		$(this).find('.tooltip').fadeOut(200);
-	});
 	
-	$("#header .cartInfo").click(function(){
-		$("#shoppingCart").toggle();		
-	});
-	
-	$(".closeShoppingCart").click(function(){
-		$("#shoppingCart").toggle();
-	});
-	
-	simpleCart.bind( "afterAdd" , function( item ){
-		  showMessage(item.get("name")+" was added to the cart!");
+	simpleCart.bind( "afterAdd" , function(item){
+		$.mobile.changePage("/cart", {transition: "slide"});
 	});
 });
-
-function showMessage(message) {
-    $(".messageText").text(message);
-
-    $(".message").fadeIn("slow").delay(1000).fadeOut("slow");    
-}

@@ -256,15 +256,6 @@ body {
 	margin-left: 3px;
 }
 
-.shoppingCart-body .simpleCart_increment,.shoppingCart-body .simpleCart_decrement
-	{
-	line-height: 1;
-	font-size: 1px;
-	display: block;
-	height: 5px;
-	margin-top: 3px;
-}
-
 .shoppingCart-body .item-name {
 	float: left;
 	text-align: left;
@@ -456,8 +447,6 @@ body {
 	height: 30px;
 	margin: 5px 3px -10px 0px;
 }
-}
-
 
 #nav-bar {
 	width: 950px;
@@ -536,14 +525,30 @@ body {
 }
 
 #shelf-box .item_price {
-	color: #000;
-	font-size: 12px;
+	color: white !important;
+	font-size: 14px;
 	font-weight: bold;
-	border-right: 1px solid #161717;
 	height: 28px;
 	line-height: 29px;
 	text-align: center;
-	padding-right: 5px;
+	padding: 7px 7px 7px 7px;
+	background: #B62923; /* Old browsers */
+	background: -moz-linear-gradient(top, #B62923 88%, #95201C 100%);
+	/* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(88%, #B62923),
+		color-stop(100%, #95201C) ); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top, #B62923 88%, #95201C 100%);
+	/* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top, #B62923 88%, #95201C 100%);
+	/* Opera 11.10+ */
+	background: -ms-linear-gradient(top, #B62923 88%, #95201C 100%);
+	/* IE10+ */
+	background: linear-gradient(top, #B62923 88%, #95201C 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient(    startColorstr='#B62923',
+		endColorstr='#95201C', GradientType=0 ); /* IE6-9 */	
+	-webkit-box-shadow: 0 0 5px 0px #731916;
+	-moz-box-shadow: 0 0 5px 0px #731916;
+	box-shadow: 0 0 5px 0px #731916;
 }
 
 #shelf-box a.item_add {

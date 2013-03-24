@@ -59,7 +59,7 @@ public class HomeController {
 
 	@RequestMapping(value="/signin", method=RequestMethod.GET)
 	public void signin() {
-	}
+	}		
 
 	@RequestMapping(value="/signup", method=RequestMethod.GET)
 	public User signup(WebRequest request) {
@@ -112,6 +112,10 @@ public class HomeController {
 	public void dashboard(ModelMap map) {
 		Dashboard dashboard = dashboardRepository.findByViewName("dashboard");
 		map.addAttribute("dashboard", dashboard);
+	}
+	
+	@RequestMapping(value="/cart", method=RequestMethod.GET)
+	public void prepareCart() {
 	}
 
 	@Inject

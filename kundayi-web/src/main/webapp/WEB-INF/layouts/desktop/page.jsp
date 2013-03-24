@@ -5,7 +5,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title><tiles:insertAttribute name="title" defaultValue="Polonious" /></title>
+	<title><tiles:insertAttribute name="title" defaultValue="Do it for Kundayi" /></title>
 	<meta http-equiv="content-type" content="text/html;charset=utf-8" />
 	<link rel="stylesheet" href="<c:url value="/resources/wordpress.css" />" type="text/css" media="screen" />
 	<link rel="stylesheet" href="<c:url value="/resources/css/style.css" />" type="text/css" />
@@ -17,7 +17,8 @@
 		var pageReady = [];
 	</script>
 
-	<script type="text/javascript" src="http://code.jquery.com/jquery-1.8.3.min.js"></script>
+	<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+	<script src="http://code.jquery.com/jquery-migrate-1.1.1.min.js"></script>
 	<script type="text/javascript" src="/resources/simplecart/simpleCart.min.js"></script>
 	<script type="text/javascript" src="/resources/js/main.js"></script>		
 
