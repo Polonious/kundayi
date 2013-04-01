@@ -435,6 +435,12 @@ body {
 	margin: 5px 3px -10px 0px;
 }
 
+.button.primary.more {	
+	text-decoration: none !important;	
+	float: right;
+	padding: 0.5em 1.5em;
+}
+
 #nav-bar {
 	width: 950px;
 	margin: 0 auto;
