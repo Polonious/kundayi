@@ -1,0 +1,133 @@
+/* adding a few styles to the navigation bar */
+#nav {
+	margin: 0;
+	padding: 0;
+	/*
+	height: 1em;
+	*/
+}
+
+#nav>li {
+	margin-top: 0;
+	list-style: none;
+	float: left;
+}
+
+#nav li a,#nav #register,.welcome {
+	line-height: 40px;
+	display: block;
+	padding: 0px 15px;
+	text-decoration: none;
+	text-shadow: 0 0 1px #B6AB2B;
+	font-weight: bold;
+}
+
+#nav #register a {
+	font-size: 15px;
+	padding: 0;
+	display: inline;
+}
+
+#nav #register a:hover {
+	text-decoration: underline;
+}
+
+#nav #register {
+	padding: 0;
+}
+
+/* apply some styles to the subnavigation section */
+#nav li ul {
+	display: none;
+	background: #B62923; /* Old browsers */
+	background: -moz-linear-gradient(top, #D62F2A 0%, #B62923 100%);
+	/* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #D62F2A),
+		color-stop(100%, #B62923) ); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top, #D62F2A 0%, #B62923 100%);
+	/* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top, #D62F2A 0%, #B62923 100%);
+	/* Opera 11.10+ */
+	background: -ms-linear-gradient(top, #D62F2A 0%, #B62923 100%);
+	/* IE10+ */
+	background: linear-gradient(top, #D62F2A 0%, #B62923 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient(   startColorstr='#D62F2A',
+		endColorstr='#B62923', GradientType=0 ); /* IE6-9 */
+	-webkit-box-shadow: 0 0 3px 2px #A6231F;
+	-moz-box-shadow: 0 0 3px 2px #A6231F;
+	box-shadow: 0 0 3px 2px #A6231F;
+	border: 1px solid #95201C;
+}
+
+/* style the list for its "hover" state */
+#nav li:hover ul {
+	display: block;
+	position: absolute;
+	margin: 0;
+	padding: 0;
+}
+
+#nav li:hover li {
+	float: none;
+}
+
+#nav li:hover>a {
+	background: #B62923; /* Old browsers */
+	background: -moz-linear-gradient(top, #D62F2A 0%, #B62923 100%);
+	/* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #D62F2A),
+		color-stop(100%, #B62923) ); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top, #D62F2A 0%, #B62923 100%);
+	/* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top, #D62F2A 0%, #B62923 100%);
+	/* Opera 11.10+ */
+	background: -ms-linear-gradient(top, #D62F2A 0%, #B62923 100%);
+	/* IE10+ */
+	background: linear-gradient(top, #D62F2A 0%, #B62923 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient(   startColorstr='#D62F2A',
+		endColorstr='#B62923', GradientType=0 ); /* IE6-9 */
+	color: white;
+	/* border-top: solid 1px #F8F8F8; */
+	-webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, .2);
+	-moz-box-shadow: 0 1px 1px rgba(0, 0, 0, .2);
+	box-shadow: 0 1px 1px rgba(0, 0, 0, .2);
+	text-shadow: 0 0 2px #A6231F;
+}
+
+#nav li:hover li a {
+	line-height: 30px;
+	color: white;
+	text-shadow: 0 0 2px #A6231F;
+}
+
+#nav ul a:hover {
+	background: #FAD532; /* Old browsers */
+	background: -moz-linear-gradient(top, #FAD532 0%, #EDC927 100%);
+	/* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #42b4d1),
+		color-stop(100%, #EDC927) ); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top, #FAD532 0%, #EDC927 100%);
+	/* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top, #FAD532 0%, #EDC927 100%);
+	/* Opera 11.10+ */
+	background: -ms-linear-gradient(top, #FAD532 0%, #EDC927 100%);
+	/* IE10+ */
+	background: linear-gradient(top, #FAD532 0%, #EDC927 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient(   startColorstr='#FAD532',
+		endColorstr='#EDC927', GradientType=0 ); /* IE6-9 */
+	color: black !important;
+	text-shadow: 0 0px 1px #FAFAFA !important;
+}
+
+#nav ul li:last-child>a,#nav li ul {
+	-webkit-border-bottom-left-radius: 7px;
+	-moz-border-radius-bottomleft: 7px;
+	-webkit-border-bottom-right-radius: 7px;
+	-moz-border-radius-bottomright: 7px;
+	border-bottom-left-radius: 7px;
+	border-bottom-right-radius: 7px;
+}
+
+#nav #sign-in,#nav #register,#nav #sign-out {
+	float: right;
+}
