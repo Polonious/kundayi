@@ -7,7 +7,7 @@ $(function(){
 			{ view: "currency", attr: "price", label: "Price"},			
 			{ attr: "quantity", label: "Quantity", view:"input"},			
 			{ view: "currency", attr: "total", label: "SubTotal" },		
-			{ view: "remove", text: "<img src=\"/resources/images/cart_remove.png\" width=\"40px\" height=\"39px\" style=\"margin:-13px;\">", label: false}			
+			{ view: "remove", text: "<img src=\"/resources/images/cart_remove.png\">", label: false}			
 		],
 
 		cartStyle: "div", 
@@ -62,7 +62,7 @@ $(function(){
 		beforeCheckout		: null,
 	        beforeRemove           : null
 	});
-
+	
 	$("#content-box .simpleCart_shelfItem").mouseenter(function(event) {		
 		$(this).find('.tooltip').fadeIn(200);
 	});
@@ -70,17 +70,21 @@ $(function(){
 		$(this).find('.tooltip').fadeOut(200);
 	});
 	
-	$("#header .cartInfo").click(function(){
-		$("#shoppingCart").toggle();		
-	});
-	
 	$(".closeShoppingCart").click(function(){
-		$("#shoppingCart").toggle();
+		$("#shoppingCart").hide();
 	});
 	
-	simpleCart.bind( "afterAdd" , function( item ){
-		  showMessage(item.get("name")+" was added to the cart!");
-	});
+	simpleCart.bind( "afterAdd" , function( item ){		
+		  $("html, body").animate({ scrollTop: 0 }, "slow");
+		  var messageBox = $(".message");
+		  messageBox.css({
+		        display: "block",
+		        position: "absolute",
+		        left: ($(".cartInfo").offset().left - 50) + "px",
+		        top: ($(".cartInfo").offset().top + 40)+ "px"
+		    });
+		  showMessage(item.get("name")+" was added to the cart!");		  
+	});	
 });
 
 function showMessage(message) {

@@ -6,7 +6,7 @@ $(function(){
 			{ attr: "name", label: false},
 			{ view: "currency", attr: "price", label: false},			
 			{ attr: "quantity", view:"input", label: false},								
-			{ view: "remove", text: "<img src=\"/resources/images/cart_remove.png\" width=\"33px\" height=\"31px\">", label: false}			
+			{ view: "remove", text: "<img src=\"/resources/images/cart_remove.png\">", label: false}			
 		],
 
 		cartStyle: "div", 

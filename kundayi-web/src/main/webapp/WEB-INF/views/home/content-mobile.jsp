@@ -27,3 +27,15 @@
 		</p>
 	</div>
 </div>
+<div id="menuBox">
+	<div class="menuItems">
+		<div data-role="controlgroup">
+		<a href="/cart" data-role="button" data-mini="true" data-icon="arrow-r">Cart</a>
+		<c:forEach var="userDashlet" items="${content.userDashlets}">						
+				<a href="/content/${userDashlet.dashlet.model=='articles'?'category':'article'}/${userDashlet.dashlet.parameter}" data-role="button" data-mini="true" data-icon="arrow-r">${userDashlet.dashlet.title}				
+				</a>						
+		</c:forEach>			
+			<a href="/content/article/contact-us" data-role="button" data-mini="true" data-icon="arrow-r">Contact Us</a>			
+		</div>
+	</div>
+</div>

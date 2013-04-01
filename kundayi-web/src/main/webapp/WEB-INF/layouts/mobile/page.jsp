@@ -32,7 +32,7 @@
 		<tiles:insertAttribute name="header" />
 	</div>
 	<div id="content" data-role="content">
-		<tiles:insertAttribute name="content" />
+		<tiles:insertAttribute name="content" />		
 	</div>
 
 	<sec:authorize access="isAuthenticated()">
