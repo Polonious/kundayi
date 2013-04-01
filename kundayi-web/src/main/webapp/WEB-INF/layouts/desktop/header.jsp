@@ -28,7 +28,7 @@
 									'/content/dashlet/${userDashlet.id}',
 									function() {									
 										$(".cartInfo").click(
-												function() {
+												function(event) {
 													event.stopPropagation();
 													if ($("#shoppingCart").is(':hidden'))
 														$("#shoppingCart").show();
