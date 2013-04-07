@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE tiles-definitions PUBLIC "-//Apache Software Foundation//DTD Tiles Configuration 2.1//EN" "http://tiles.apache.org/dtds/tiles-config_2_1.dtd">
+
+<tiles-definitions>
+	
+	<definition name="template" templateExpression="/WEB-INF/layouts/${currentDevice.mobile?'mobile':'desktop'}/page.jsp">
+		<put-attribute name="header" expression="/WEB-INF/layouts/${currentDevice.mobile?'mobile':'desktop'}/header.jsp" />
+		<put-attribute name="shoppingCart" expression="/WEB-INF/layouts/${currentDevice.mobile?'mobile':'desktop'}/shoppingCart.jsp" />
+		<put-attribute name="footer" expression="/WEB-INF/layouts/${currentDevice.mobile?'mobile':'desktop'}/footer.jsp" />
+	</definition>
+
+	<!-- required 'modelName' in modelMap, with new/edit sub-pages, for standard CRUD feature -->
+	<definition name="browse" extends="template">
+		<put-attribute name="title" expression="${msg['label.browse']} ${msg[modelName]}" />
+		<put-attribute name="content" expression="/WEB-INF/layouts/browse.jsp" />
+		<put-list-attribute name="styles">
+			<add-attribute value="http://ajax.aspnetcdn.com/ajax/jquery.dataTables/1.9.3/css/jquery.dataTables.css" />
+		</put-list-attribute>
+		<put-list-attribute name="scripts">
+			<add-attribute value="http://ajax.aspnetcdn.com/ajax/jquery.dataTables/1.9.3/jquery.dataTables.min.js" />
+			<add-attribute value="/resources/datatables/dataTables.utils.js" />
+		</put-list-attribute>
+	</definition>
+
+	<!-- required 'modelName' in modelMap, for standard CRUD feature -->
+	<definition name="view" extends="template">
+		<put-attribute name="title" expression="${msg['label.view']} ${msg[modelName]}" />
+		<put-attribute name="content" expression="/WEB-INF/views/${modelName}/view.jsp" />
+	</definition>
+
+	<!-- required 'modelName' in modelMap, for standard CRUD feature -->
+	<definition name="new" extends="template">
+		<put-attribute name="title" expression="${msg['label.new']} ${msg[modelName]}" />
+		<put-attribute name="content" value="/WEB-INF/layouts/new.jsp"/>
+	    <put-attribute name="entry" expression="/WEB-INF/views/${modelName}/entry.jsp" cascade="true"/>
+	</definition>
+
+	<!-- required 'modelName' in modelMap, for standard CRUD feature -->
+	<definition name="edit" extends="template">
+		<put-attribute name="title" expression="${msg['label.edit']} ${msg[modelName]}" />
+		<put-attribute name="content" value="/WEB-INF/layouts/edit.jsp"/>
+	    <put-attribute name="entry" expression="/WEB-INF/views/${modelName}/entry.jsp" cascade="true"/>
+	</definition>
+	
+	<!-- TODO: remove it -->
+	<definition name="page" templateExpression="/WEB-INF/layouts/${currentDevice.mobile ? 'mobile/' : 'standard/'}page.jsp">
+		<put-attribute name="header" expression="/WEB-INF/layouts/${currentDevice.mobile ? 'mobile/' : 'standard/'}header.jsp" />
+		<put-attribute name="footer" expression="/WEB-INF/layouts/${currentDevice.mobile ? 'mobile/' : 'standard/'}footer.jsp" />
+	</definition>
+	
+</tiles-definitions>
